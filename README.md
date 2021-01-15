@@ -51,8 +51,9 @@ conda install \
  pandas=1.* \
  flake8=3.* \
  black=19.* \
- spacy \
- tika
+ spacy=2.2.3 \
+ tika=1.24 \
+ re=2.2.1
 ```
 
 A little overview of the packages:
