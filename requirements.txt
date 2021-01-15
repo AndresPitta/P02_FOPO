@@ -1,0 +1,9 @@
+spacy==2.2.3
+tika==1.24
+pandas==1.1.5
+re==2.2.1
+numpy==1.19.4
+tensorflow==2.4.0
+tensorflow_hub==0.10.0
+sklearn==0.22.2.post1
+matplotlib==3.2.2
