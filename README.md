@@ -5,10 +5,11 @@ This document contains the requirements and instructions to be able to run the F
 - Power BI Desktop Version: 2.87.923.0 64-bit (November 2020)
 - Python 3.7.6 or higher
 - Conda 4.9.2 or higher (This is python's package manager)
+- Java version 8 
 
-To download Python & Conda please go [here](https://docs.conda.io/en/latest/miniconda.html). And to download power BI, please go [here](https://powerbi.microsoft.com/en-us/downloads/)
+To download Python & Conda please go [here](https://docs.conda.io/en/latest/miniconda.html). To download power BI, please go [here](https://powerbi.microsoft.com/en-us/downloads/). Finally, to download java please go [here](https://www.java.com/en/download/ie_manual.jsp)
 
-We are also going to use the terminal to access to jupyter and python. To get to know how to open the terminal please see [this video](https://www.youtube.com/watch?v=5AJbWEWwnbY&feature=youtu.be&ab_channel=tiffanytimbers)
+We are also going to use the terminal to access to jupyter and python. To get to know how to open the Anaconda powershell by looking for it at the start menu.
 
 After installation, restart the terminal. If the installation was successful, you will see (base) prepending to your prompt string. To confirm that conda is working, you can ask it which version was installed:
 
@@ -42,18 +43,22 @@ We are going to use `conda` to install Python packages from different online rep
 conda config --add channels conda-forge
 ```
 
-Now, we can use the command `conda install <package-name>` to install the required packages. Let's run this code to install the essential packages for the project:
+Now, we can use the command `conda install <package-name>` to install the required packages. Let's run this code, line by line individually, to install the essential packages for the project:
 
 ```
-conda install \
- jupyterlab=2.* \
- numpy=1.* \
- pandas=1.* \
- flake8=3.* \
- black=19.* \
- spacy=2.2.3 \
- tika=1.24 \
- re=2.2.1
+conda install jupyterlab=2.* 
+conda install numpy=1.* 
+conda install pandas=1.* 
+conda install flake8=3.* 
+conda install black=19.* 
+pip install spacy==2.2.3 
+conda install tika=1.24
+conda install re=2.2.1
+```
+We are also going to install spacy english model by running:
+
+```
+python -m spacy download en_core_web_sm
 ```
 
 A little overview of the packages:
@@ -72,10 +77,12 @@ A little overview of the packages:
 
 - Apache Tika is a tool that will allow us to read the data from word documents. It also permits PDF documents, and many more. The documentation is [here](https://tika.apache.org/)
 
+- Re is a regular expression package for text processing.
+
 ## Text analysis
 
 This project contains 2 notebooks:
 
 - The first one is called [data_importing.ipynb](https://github.com/AndresPitta/P02_FOPO/blob/master/src/data_importing.ipynb). This notebook contains the documented process of reading in the data from word files.
 
-- The second one is called [similarities.ipynb](https://github.com/AndresPitta/P02_FOPO/blob/master/src/similarities.ipynb). This notebook contains the process of finding the similar topics in the interviews
+- The second one is called [similarities.ipynb](https://github.com/AndresPitta/P02_FOPO/blob/master/src/similarities.ipynb). This notebook contains the process of finding the similar topics in the interviews. Due to how heavy this process is, it is recommended to use cloud services to run this code. I recommend using [google colab] (https://colab.research.google.com/notebooks/intro.ipynb#recent=true). However, this requires uploading a dataset to google drive.
