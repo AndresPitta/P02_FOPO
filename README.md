@@ -51,9 +51,15 @@ conda install numpy=1.*
 conda install pandas=1.* 
 conda install flake8=3.* 
 conda install black=19.* 
-pip install spacy==2.2.3 
-conda install tika=1.24
-conda install re=2.2.1
+pip install spacy
+conda install -c conda-forge tika
+conda install re
+
+pip install --upgrade pip
+pip install tensorflow
+conda install -c conda-forge tensorflow-hub
+pip install -U scikit-learn
+pip install absl-py
 ```
 We are also going to install spacy english model by running:
 
