@@ -85,6 +85,12 @@ A little overview of the packages:
 
 - Re is a regular expression package for text processing.
 
+- Tensorflow is a python package used for neural networks, tensorflow-hub is used for Google's Universal Sentence Encoder (USE) model. If you want to learn more about tensorflow, please go [here](https://www.tensorflow.org/). If you want to learn more about USE, pleas go [here](https://tfhub.dev/google/universal-sentence-encoder/1).
+
+- Scikit learn is a machine learning package. For this code, we are using it for the cosine similarity function. To learn more about scikit learn, please go [here](https://scikit-learn.org/stable/).
+
+- Absl
+
 ## Text analysis
 
 This project contains 2 notebooks:
