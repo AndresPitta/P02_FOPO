@@ -73,7 +73,7 @@ A little overview of the packages:
 
 - Numpy is a very useful numeric computing package. We are going to use it for array manipulation and numerical operations. To learn more please [go here](https://jupyter.org/)
 
-- Pandas will help us manipulating dataframes. To learn more [go here](https://pandas.pydata.org/)
+- Pandas will help us manipulating dataframes. To learn more [go here](https://pandas.pydata.org/). Sometimes there are compatibility issues with this version of pandas. so it is recommended to change the version to 0.25
 
 - Flake8
 
@@ -98,3 +98,13 @@ This project contains 2 notebooks:
 - The first one is called [data_importing.ipynb](https://github.com/AndresPitta/P02_FOPO/blob/master/src/data_importing.ipynb). This notebook contains the documented process of reading in the data from word files.
 
 - The second one is called [similarities.ipynb](https://github.com/AndresPitta/P02_FOPO/blob/master/src/similarities.ipynb). This notebook contains the process of finding the similar topics in the interviews. Due to how heavy this process is, it is recommended to use cloud services to run this code. I recommend using [google colab](https://colab.research.google.com/notebooks/intro.ipynb#recent=true) using [similarities-colab.ipynb](https://github.com/AndresPitta/P02_FOPO/blob/main/src/similarities-colab.ipynb). However, this requires uploading a dataset to google drive.
+
+## Format of the files
+
+This code requires a specific format for the dictionary and the interview files.
+
+- For the document, the format is: 
+![document](../imgs/document.PNG)
+
+- For the dictionary, the format is as follows: 
+![dictionary](../imgs/dictionary.PNG)
